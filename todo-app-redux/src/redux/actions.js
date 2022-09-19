@@ -26,9 +26,9 @@ export const priorityFilterChange = (priority) => {
   };
 };
 
-export const statusTodoChange = (id, checked) => {
+export const statusTodoChange = (id) => {
   return {
     type: 'todoList/statusTodoChange',
-    payload: { id, checked },
+    payload: id,
   };
 };
