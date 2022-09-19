@@ -15,14 +15,12 @@ export const todoRemainingSelector = createSelector(
       if (priority.length < 1) {
         if (status === 'All') {
           return todo.name.toUpperCase().includes(searchText.toUpperCase());
-        }
-        if (status === 'Completed') {
+        } else if (status === 'Completed') {
           return (
             todo.name.toUpperCase().includes(searchText.toUpperCase()) &&
             todo.completed
           );
-        }
-        if (status === 'Todo') {
+        } else {
           return (
             todo.name.toUpperCase().includes(searchText.toUpperCase()) &&
             !todo.completed
@@ -34,15 +32,13 @@ export const todoRemainingSelector = createSelector(
             todo.name.toUpperCase().includes(searchText.toUpperCase()) &&
             priority.includes(todo.priority)
           );
-        }
-        if (status === 'Completed') {
+        } else if (status === 'Completed') {
           return (
             todo.name.toUpperCase().includes(searchText.toUpperCase()) &&
             todo.completed &&
             priority.includes(todo.priority)
           );
-        }
-        if (status === 'Todo') {
+        } else {
           return (
             todo.name.toUpperCase().includes(searchText.toUpperCase()) &&
             !todo.completed &&

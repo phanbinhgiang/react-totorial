@@ -1,5 +1,5 @@
 import { Col, Row, Input, Button, Select, Tag } from 'antd';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
