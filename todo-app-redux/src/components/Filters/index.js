@@ -24,7 +24,7 @@ export default function Filters() {
 
   const handlePriorityChange = (e) => {
     setFilterPriorities(e);
-    dispatch(filtersSlice.actions.statusPriorityChange(e));
+    dispatch(filtersSlice.actions.priorityFilterChange(e));
   };
   return (
     <Row justify="center">

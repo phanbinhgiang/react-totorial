@@ -14,7 +14,7 @@ const filtersSlice = createSlice({
     statusFilterChange: (state, action) => {
       state.status = action.payload;
     },
-    statusPriorityChange: (state, action) => {
+    priorityFilterChange: (state, action) => {
       state.priority = action.payload;
     },
   },
